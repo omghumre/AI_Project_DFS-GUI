@@ -1,33 +1,49 @@
-# AI_Project_DFS-GUI
-The provided code is a Python program that visualizes the Depth-First Search (DFS) algorithm on a map of Romania. It uses the Tkinter library to create a graphical user interface (GUI) for the visualization.
+# Romania Map DFS Visualizer
 
-The code consists of the following main components:
+This is a Python program that visualizes the Depth-First Search (DFS) algorithm on the map of Romania. It uses the Tkinter library for creating a graphical user interface (GUI) and provides an interactive visualization of the DFS algorithm as it searches for a path between two cities.
 
-Romania Map Representation:
-The Romania map is represented as a dictionary called romania_map, where the cities are the keys, and the values are lists of neighboring cities. Each city is connected to its neighboring cities by roads.
+## Prerequisites
 
-GUI Application:
-The RomaniaMapDFS class is responsible for creating the GUI application using Tkinter. It sets up the main window, canvas, labels, dropdown menus, and submit button.
+- Python 3.x
+- Tkinter library (usually included with Python)
 
-Visualization Functions:
+## How to Run
 
-start_visualization: This function is called when the submit button is clicked. It retrieves the selected source and destination cities from the dropdown menus and initiates the DFS visualization.
-visualize_dfs: This function performs the DFS algorithm to find a path from the source city to the destination city. It uses a stack to keep track of the current city and the path taken so far. It also visualizes the progress by updating the current state and drawing the map at each step.
-draw_map: This function draws the map of Romania on the canvas. It uses the city coordinates to position the cities and draws lines between neighboring cities.
-highlight_path: This function highlights the path found by the DFS algorithm by drawing thicker lines and changing the colors of the source and destination cities.
-Coordinate Mapping:
-The get_city_coordinates function maps each city to its corresponding x and y coordinates on the canvas. These coordinates are used to position the cities and draw the lines accurately.
+1. Make sure you have Python installed on your system.
+2. Clone the repository or download the `romania_map_dfs.py` file.
+3. Open a terminal or command prompt and navigate to the directory containing the `romania_map_dfs.py` file.
+4. Run the following command:
 
-Color Constants:
-The code defines three color constants: COLOR_INITIAL, COLOR_VISITED, and COLOR_FINAL. These colors are used to indicate the state of the cities during the visualization. Initially, cities are shown in the initial color, then they are marked as visited, and finally, the path is highlighted in the final color.
 
-To use the code, you can follow these steps:
+5. The GUI window titled "Romania Map DFS Visualizer" will open.
+6. Select a source city and a destination city from the dropdown menus.
+7. Click the "Submit" button to start the visualization.
+8. The program will animate the DFS algorithm's progress on the map of Romania, highlighting the visited cities and the final path when found.
 
-Ensure that you have Python installed on your system along with the Tkinter library.
-Copy the provided code and save it in a Python file (e.g., romania_map_dfs.py).
-Run the Python file using a Python interpreter.
-The GUI window will appear with two dropdown menus for selecting the source and destination cities.
-Choose the source and destination cities from the dropdown menus.
-Click the "Submit" button to start the visualization.
-The visualization will show the progress of the DFS algorithm on the map of Romania, highlighting the visited cities and the final path found.
-Once the visualization is complete, you can close the GUI window.
+## How it Works
+
+The program represents the map of Romania as a dictionary where each city is a key, and its neighboring cities are the corresponding values. The DFS algorithm is then applied to this graph-like structure to find a path from the source city to the destination city.
+
+The visualization uses Tkinter to create a graphical interface. The map is drawn using circles representing cities, lines representing connections between cities, and text labels for city names. The algorithm's progress is displayed by highlighting the visited cities in gray color.
+
+When the algorithm finds the destination city, the final path is highlighted in blue color.
+
+## Customization
+
+If you want to modify the map or add more cities, you can update the `romania_map` dictionary at the beginning of the code. Each city is a key, and its neighbors are specified as a list of values.
+
+You can also customize the colors used for visualization by modifying the following constants defined in the code:
+
+- `COLOR_INITIAL`: Color of the initial city circles (default: "white").
+- `COLOR_VISITED`: Color used to highlight visited cities during the algorithm's progress (default: "dim gray").
+- `COLOR_FINAL`: Color used to highlight the final path (default: "blue").
+
+Additionally, you can adjust the coordinates of the cities on the map by modifying the `get_city_coordinates` function. The coordinates are defined as dictionaries with city names as keys and X and Y coordinates as values.
+
+## Contributions
+
+Contributions to this project are welcome. If you find any issues or want to enhance the functionality, feel free to open an issue or submit a pull request.
+
+## License
+
+This code is released under the MIT License. You can find the details in the [LICENSE](LICENSE) file.
