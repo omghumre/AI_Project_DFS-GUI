@@ -20,6 +20,12 @@ This is a Python program that visualizes the Depth-First Search (DFS) algorithm 
 7. Click the "Submit" button to start the visualization.
 8. The program will animate the DFS algorithm's progress on the map of Romania, highlighting the visited cities and the final path when found.
 
+## Demo Video
+
+
+https://github.com/omg12347/AI_Project_DFS-GUI/assets/97293861/6d7b0362-df7b-4fb9-8df0-a59f6010a3a4
+
+
 ## How it Works
 
 The program represents the map of Romania as a dictionary where each city is a key, and its neighboring cities are the corresponding values. The DFS algorithm is then applied to this graph-like structure to find a path from the source city to the destination city.
